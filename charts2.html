@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"
+        integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<canvas id='myChart'></canvas>
+<script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September','October', 'November', 'December'],
+      datasets:[{
+        data:[86, 71, 13, 45, 60, 70, 80, 40, 100, 50, 40, 60],
+        label:'Candy',
+        borderColor: 'rgba(120, 120, 255, 1)'
+      },
+        {
+        data:[100, 21, 113, 0, 70, 120,100, 50, 60, 70, 80, 70],
+        label:'Clothes',
+        borderColor: 'rgba(225, 100, 255, 1)'
+      }, {
+        data:[0, 21, 35, 12, 210, 230, 120, 40, 60, 80, 90, 70],
+        label:'Amazon',
+        borderColor: 'rgba(100, 200, 100, 1)'
+        },
+          {
+              data:[220, 101, 35, 12, 40, 100, 120, 130, 160, 190, 200, 210],
+              label:'Movies',
+              borderColor: 'rgba(70, 10, 40, 1)'
+          }]
+    },
+    options:{
+      plugins:{
+        title:{
+          display: true,
+          text: 'Monthly Spending'
+        },
+        legend: {
+          position: 'left'
+        }
+      }
+    }
+  });
+
+</script>
+<canvas id='chart2'></canvas>
+<script>
+    var cty = document.getElementById('chart2');
+    var nextChart = new Chart(cty, {
+        type: 'scatter',
+        data: {
+        datasets:[{
+            label: 'dataset1',
+            backgroundColor: 'rgba(255, 200, 50, 1)',
+            pointBackgroundColor: 'rgba(255, 200, 50, 1)',
+            pointRadius: 4,
+            data:[
+                {x: 7, y: 10},
+                {x: 11, y: 25},
+                {x: 15, y: 15},
+                {x: 6, y: 8},
+                {x: 1, y: 3},
+                {x: 13, y: 17},
+                {x: 12, y: 23},
+                {x: 11, y: 20},
+            ]
+        },{
+            label: 'dataset2',
+            backgroundColor: 'rgba(50, 200, 50, 1)',
+            pointBackgroundColor: 'rgba(50, 200, 50, 1)',
+            pointRadius: 4,
+            data:[
+                {x: 1, y: 10},
+                {x: 7, y: 12},
+                {x: 15, y: 16},
+                {x: 13, y: 25},
+                {x: 9, y: 13},
+                {x: 8, y: 9},
+                {x: 2, y: 12},
+                {x: 1, y: 7},
+
+            ]
+        },{
+            label: 'dataset3',
+            backgroundColor: 'rgba(100, 20, 50, 1)',
+            pointBackgroundColor: 'rgba(100, 20, 50, 1)',
+            pointRadius: 4,
+            data:[
+                {x: 10, y: 1},
+                {x: 17, y: 12},
+                {x: 25, y: 18},
+                {x: 3, y: 15},
+                {x: 19, y: 18},
+                {x: 18, y: 19},
+                {x: 12, y: 19},
+                {x: 11, y: 17},
+
+            ]
+        },{
+            label: 'dataset4',
+            backgroundColor: 'rgba(173, 216, 230, 1)',
+            pointBackgroundColor: 'rgba(173, 216, 230, 1)',
+            pointRadius: 4,
+            data:[
+                {x: 15, y: 1},
+                {x: 10, y: 22},
+                {x: 19, y: 25},
+                {x: 20, y: 15},
+                {x: 23, y: 24},
+                {x: 21, y: 13},
+                {x: 14, y: 19},
+                {x: 1, y: 23},
+
+            ]
+        }]
+        },
+        options: {
+            scales: {
+                xAxis:{
+                    beginAtZero: true
+                },
+                yAxis:{
+                    beginAtzero: true
+                }
+            },
+            plugins: {
+                title: {
+                    display:true,
+                    text: 'Sales'
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>
